@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Inter:wght@300..800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f7f6f2;
+  --bg-soft: #ffffff;
+  --surface: #ffffff;
+  --line: rgba(23, 21, 15, 0.1);
+  --text: #17150f;
+  --text-2: #4a463d;
+  --text-3: #8a857b;
+  --accent: #ff4d00;
+  --accent-soft: rgba(255, 77, 0, 0.1);
+  --accent-line: rgba(255, 77, 0, 0.35);
+  --live: #16a34a;
+  --info: #0e7490;
+}
+
+.font-display {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.font-body {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-mono2 {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+.glass-pill {
+  border: 1px solid rgba(23, 21, 15, 0.12);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+}
+
+.double-border-capsule {
+  border: 1px solid rgba(23, 21, 15, 0.15);
+  outline: 1px solid rgba(23, 21, 15, 0.08);
+  outline-offset: 3px;
+}
+
+.hero-grid-bg {
+  background-image:
+    linear-gradient(rgba(23, 21, 15, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 21, 15, 0.05) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, black 30%, transparent 75%);
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, black 30%, transparent 75%);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee 30s linear infinite;
+  width: max-content;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
