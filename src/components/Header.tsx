@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
-import { NAV, SITE } from '../data'
+import { NAV } from '../data'
 import { EASE_OUT } from './ui'
 
 export default function Header() {
@@ -39,6 +39,7 @@ export default function Header() {
               {item.label}
             </NavLink>
           ))}
+          <a href="https://costudent.app" target="_blank" rel="noopener noreferrer" className="font-body text-[15px] font-semibold tracking-[-0.2px] text-[#FF4D00] transition-colors hover:text-[#E64600]">CoStudent ↗</a>
         </nav>
 
         <div className="hidden items-center gap-[16px] lg:flex">
@@ -85,6 +86,7 @@ export default function Header() {
                   {item.label}
                 </NavLink>
               ))}
+              <a href="https://costudent.app" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)} className="font-body text-[18px] font-semibold tracking-[-0.2px] text-[#FF4D00]">CoStudent ↗</a>
               <Link
                 to="/contact"
                 onClick={() => setMenuOpen(false)}

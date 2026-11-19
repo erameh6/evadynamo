@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, BrainCircuit, Captions, FileText, GraduationCap } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { Reveal, WaveText, containerVariants, itemVariants } from '../components/ui'
 import { CtaBand } from '../components/Shared'
@@ -47,24 +47,24 @@ export default function HomePage() {
               variants={itemVariants}
               className="mt-[14px] font-display text-[38px] font-semibold leading-[105%] tracking-[-1.5px] text-[#17150F] sm:text-[56px] sm:tracking-[-2.4px] lg:text-[68px] lg:tracking-[-2.8px]"
             >
-              <WaveText text="Building" /> <WaveText text="intelligent" /> <WaveText text="software" />
-              <br className="block lg:hidden" />
-              {' '}<WaveText text="and" />{' '}
-              <WaveText text="scalable" className="text-[#FF4D00]" />{' '}
-              <WaveText text="technology" className="text-[#FF4D00]" /> <WaveText text="solutions" />
+              <WaveText text="Building" /> <WaveText text="AI-powered" className="text-[#FF4D00]" />
+              <WaveText text="products" /> <WaveText text="and" />
+              <WaveText text="intelligent" className="text-[#FF4D00]" /> <WaveText text="technology" />
+              <WaveText text="solutions" />
             </motion.h1>
 
             <motion.p variants={itemVariants} className="mt-[18px] max-w-[640px] font-body text-[18px] leading-[150%] tracking-[-0.3px] text-[#4A463D] md:text-[20px]">
-              Eva Dynamo helps businesses develop software, automate operations, and build reliable
-              cloud infrastructure — engineering teams, platforms and AI into systems that ship.
+              Eva Dynamo Ltd is an AI technology company building intelligent software products
+              and scalable technology solutions. We combine artificial intelligence, software
+              engineering and cloud infrastructure to solve practical problems.
             </motion.p>
 
             <motion.div variants={itemVariants} className="mt-[32px] flex flex-col gap-[14px] sm:flex-row sm:gap-[16px]">
-              <Link to="/contact" className="flex items-center justify-center gap-[8px] rounded-[8px] bg-[#FF4D00] px-[24px] py-[13px] font-body text-[15px] font-semibold text-white shadow-md shadow-black/10 transition-colors hover:bg-[#E64600]">
-                Request Consultation <ArrowRight className="h-4 w-4" />
-              </Link>
+              <a href="https://costudent.app" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-[8px] rounded-[8px] bg-[#FF4D00] px-[24px] py-[13px] font-body text-[15px] font-semibold text-white shadow-md shadow-black/10 transition-colors hover:bg-[#E64600]">
+                Explore CoStudent <ArrowUpRight className="h-4 w-4" />
+              </a>
               <Link to="/services" className="flex items-center justify-center gap-[8px] rounded-[8px] border border-[rgba(23,21,15,0.2)] px-[24px] py-[13px] font-body text-[15px] font-normal text-[#17150F] transition-colors hover:border-[#FF4D00] hover:text-[#FF4D00]">
-                Explore Services
+                Our Capabilities
               </Link>
             </motion.div>
 
@@ -124,6 +124,46 @@ export default function HomePage() {
         </div>
       </div>
 
+      {/* Flagship AI product */}
+      <section id="costudent" className="bg-[#17150F] px-[24px] py-[88px] text-white md:px-[48px] md:py-[112px]">
+        <div className="mx-auto grid w-full max-w-[1180px] items-center gap-[48px] lg:grid-cols-[1.05fr_0.95fr]">
+          <Reveal>
+            <span className="font-mono2 text-[12px] tracking-[0.18em] text-[#FF8A52] uppercase">// Our flagship AI product</span>
+            <h2 className="mt-[16px] font-display text-[36px] font-semibold leading-[110%] tracking-[-1.4px] md:text-[48px]">
+              Meet <span className="text-[#FF6A2A]">CoStudent.</span><br />A smarter way to learn.
+            </h2>
+            <p className="mt-[20px] max-w-[600px] font-body text-[16px] leading-[175%] text-white/70 md:text-[18px]">
+              CoStudent is an AI-powered learning platform that helps students understand their courses,
+              work with their study materials and get more value from every lecture — all in one place.
+            </p>
+            <div className="mt-[28px] flex flex-wrap gap-[12px]">
+              <a href="https://costudent.app" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-[8px] rounded-[8px] bg-[#FF4D00] px-[22px] py-[12px] font-body text-[14px] font-semibold text-white transition-colors hover:bg-[#E64600]">
+                Visit CoStudent <ArrowUpRight className="h-4 w-4" />
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.costudent.app" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-[8px] rounded-[8px] border border-white/20 px-[22px] py-[12px] font-body text-[14px] text-white/85 transition-colors hover:border-white/50">
+                Get the Android app <ArrowUpRight className="h-4 w-4" />
+              </a>
+            </div>
+          </Reveal>
+          <Reveal delay={0.12}>
+            <div className="grid gap-[12px] sm:grid-cols-2">
+              {[
+                { icon: Captions, title: 'Live lecture captions', text: 'Capture lectures with real-time transcripts and AI summaries.' },
+                { icon: FileText, title: 'Chat with your materials', text: 'Ask questions about PDFs, notes and course documents.' },
+                { icon: BrainCircuit, title: 'AI explanations', text: 'Work through difficult concepts and homework step by step.' },
+                { icon: GraduationCap, title: 'Active learning', text: 'Turn study materials into flashcards, quizzes and practice.' },
+              ].map(({ icon: Icon, title, text }) => (
+                <div key={title} className="rounded-[12px] border border-white/10 bg-white/[0.05] p-[20px]">
+                  <Icon className="h-6 w-6 text-[#FF8A52]" strokeWidth={1.7} />
+                  <h3 className="mt-[18px] font-display text-[17px] font-semibold text-white">{title}</h3>
+                  <p className="mt-[8px] font-body text-[13px] leading-[165%] text-white/60">{text}</p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* Services overview */}
       <section className="bg-[#F7F6F2] px-[24px] py-[96px] md:px-[48px] md:py-[120px]">
         <div className="mx-auto w-full max-w-[1180px]">
@@ -131,11 +171,11 @@ export default function HomePage() {
             <div className="max-w-[640px]">
               <span className="font-mono2 text-[12px] tracking-[0.18em] text-[#FF4D00] uppercase">// What we do</span>
               <h2 className="mt-[14px] font-display text-[32px] font-semibold tracking-[-1px] text-[#17150F] md:text-[42px]">
-                Five disciplines. One accountable partner.
+                AI products backed by engineering depth.
               </h2>
               <p className="mt-[14px] font-body text-[16px] leading-[160%] text-[#4A463D]">
-                From a single automation to a full platform, every engagement is led by senior
-                engineers who stay until it ships — and works.
+                Alongside our own AI products, we help organizations design, build and operate
+                dependable software, cloud platforms and intelligent workflows.
               </p>
             </div>
           </Reveal>

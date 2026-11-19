@@ -3,7 +3,7 @@
 export const SITE = {
   name: 'Eva Dynamo',
   legalName: 'Eva Dynamo Ltd',
-  tagline: 'Intelligent software and scalable technology solutions',
+  tagline: 'AI products and intelligent technology solutions',
   domain: 'evadynamo.com',
   email: 'hello@evadynamo.com',
   socials: {

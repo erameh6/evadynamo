@@ -16,8 +16,8 @@ export default function Footer() {
               <span className="font-display text-[18px] font-semibold text-[#17150F]">Eva Dynamo</span>
             </Link>
             <p className="mt-[14px] font-body text-[14px] leading-[165%] text-[#4A463D]">
-              {SITE.tagline}. Software engineering, cloud, DevOps and AI — built to help
-              businesses innovate, automate and scale.
+              {SITE.tagline}. We build AI-powered software and practical technology solutions,
+              including CoStudent, our flagship learning platform.
             </p>
           </div>
 
@@ -26,6 +26,9 @@ export default function Footer() {
               Company
             </h4>
             <ul className="mt-[14px] space-y-[10px]">
+              <li>
+                <a href="https://costudent.app" target="_blank" rel="noopener noreferrer" className="font-body text-[14px] font-semibold text-[#FF4D00] hover:text-[#E64600]">CoStudent — flagship AI product ↗</a>
+              </li>
               {NAV.slice(2).map((item) => (
                 <li key={item.href}>
                   <Link to={item.href} className="font-body text-[14px] text-[#4A463D] hover:text-[#FF4D00]">

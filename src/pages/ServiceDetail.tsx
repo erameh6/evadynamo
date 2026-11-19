@@ -1,5 +1,4 @@
 import { Link, useParams } from 'react-router-dom'
-import { ArrowUpRight } from 'lucide-react'
 import { Reveal } from '../components/ui'
 import { CtaBand, PageHero } from '../components/Shared'
 import { SERVICES } from '../data'
