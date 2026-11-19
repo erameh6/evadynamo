@@ -49,7 +49,7 @@ export default function HomePage() {
             >
               <WaveText text="Building" /> <WaveText text="AI-powered" className="text-[#FF4D00]" />
               <WaveText text="products" /> <WaveText text="and" />
-              <WaveText text="intelligent" className="text-[#FF4D00]" /> <WaveText text="technology" />
+              <WaveText text="intelligent" className="text-[#FF4D00]" /> <WaveText text="technology" />{' '}
               <WaveText text="solutions" />
             </motion.h1>
 
